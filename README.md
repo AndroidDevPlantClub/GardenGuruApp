@@ -85,10 +85,7 @@ Flow Navigation (Screen to Screen)
     
 
 ## Wireframes
-![image](https://hackmd.io/_uploads/ryj9q5fmye.png)
- 
-
-
+![GardenGuruWireFrame](https://github.com/user-attachments/assets/babe56c1-2120-4880-925a-b02fe926a541)
 
 [BONUS] Digital Wireframes & Mockups
 [BONUS] Interactive Prototype
