@@ -28,19 +28,19 @@ Receiving and following care reminders.
 ## Product Spec
 ### 1. User Features (Required and Optional)
 **Required Features**
-* Users can ask promps to the AI
+* [x] Users can ask promps to the AI
 * ![ezgif-3-20c6f492e0](https://github.com/user-attachments/assets/dfa0e420-ea33-4229-b1f7-4f589feaffee)
-* Users can save records for their plant information.
-* Users can see their records even when app is offline.
-* Users can click on their records for a detailed view.
-* Users can make and recieve push notifications. 
+* [ ] Users can save records for their plant information.
+* [ ] Users can see their records even when app is offline.
+* [ ] Users can click on their records for a detailed view.
+* [ ] Users can make and recieve push notifications. 
 
 
 **Optional Features**
-[ ] Users can store responses in a digital book.
-[ ] Users can take pictures of their plant to identify it with the AI.
-[ ] Users can share their plant information with others via a share button.
-[ ] Garden Guru has a customized animation for responses
+* [ ] Users can store responses in a digital book.
+* [ ] Users can take pictures of their plant to identify it with the AI.
+* [ ] Users can share their plant information with others via a share button.
+* [ ] Garden Guru has a customized animation for responses
 
 ### 2. Screen Archetypes
 Messaging
