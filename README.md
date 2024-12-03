@@ -29,6 +29,7 @@ Receiving and following care reminders.
 ### 1. User Features (Required and Optional)
 **Required Features**
 * Users can ask promps to the AI
+* ![ezgif-3-20c6f492e0](https://github.com/user-attachments/assets/dfa0e420-ea33-4229-b1f7-4f589feaffee)
 * Users can save records for their plant information.
 * Users can see their records even when app is offline.
 * Users can click on their records for a detailed view.
