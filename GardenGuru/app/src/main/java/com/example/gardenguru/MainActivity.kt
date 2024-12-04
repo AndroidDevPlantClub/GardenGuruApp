@@ -15,11 +15,14 @@ import io.github.cdimascio.dotenv.Dotenv
 import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONArray
 import org.json.JSONObject
 import io.github.cdimascio.dotenv.dotenv
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.Response
+import okio.IOException
+import org.json.JSONArray
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,11 +32,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var sendButton: ImageButton
     lateinit var messages: MutableList<Message>
     lateinit var messageAdapter: MessageRecyclerViewAdapter
-    val dotenv = Dotenv.configure()
-        .directory("/Users/raphaelholganza/Desktop/GardenGuruApp/GardenGuru") // Specify the directory where your .env file is located
+    private val dotenv: Dotenv = Dotenv.configure()
+        .directory("GardenGuru/.env") // Specify the directory where your .env file is located
         .load()
     private val apiKey = dotenv["API_KEY"]
-
 
     companion object {
         val JSON: MediaType = "application/json; charset=utf-8".toMediaType()
@@ -45,45 +47,61 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun callAPI(question: String) {
-        // Creating a JSON object for the request body
+        // Define JSON payload for Gemini API
         val jsonBody = JSONObject().apply {
             try {
-                put("model", "gpt-3.5-turbo") // Add key-value pair to the JSON object
-                put("prompt", question)
-                put("temperature", 0)
+                put("contents", JSONArray().apply {
+                    put(JSONObject().apply {
+                        put("parts", JSONArray().apply {
+                            put(JSONObject().apply {
+                                put("text", question)
+                            })
+                        })
+                    })
+                })
             } catch (e: Exception) {
                 e.printStackTrace()
             }
-            val requestBody = this.toString().toRequestBody(JSON)
-            val request = okhttp3.Request.Builder()
-                .url("https://api.openai.com/v1/completions")
-                .header(
-                    "Authorization", "Bearer $apiKey") // Replace with actual header key-value
-                .post(requestBody)
-                .build()
+        }
 
-            client.newCall(request).enqueue(object : okhttp3.Callback {
-                override fun onFailure(call: okhttp3.Call, e: java.io.IOException) {
-                    addResponse("Failed to load response due to ${e.message}")
-                }
+        // Create the request body
+        val requestBody = jsonBody.toString().toRequestBody("application/json".toMediaType())
 
-                override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
-                    if (response.isSuccessful) {
-                        try {
-                            val jsonObject = JSONObject(response.body?.string())
-                            val jsonArray = jsonObject.getJSONArray("choices")
-                            val result: String = jsonArray.getJSONObject(0).getString("text")
-                            addResponse(result.trim())
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                        }
+        // Build the HTTP request
+        val request = okhttp3.Request.Builder()
+            .url("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=$apiKey")
+            .header("Content-Type", "application/json")
+            .post(requestBody)
+            .build()
+
+        // Make the HTTP call using OkHttp
+        val client = OkHttpClient()
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                addResponse("Request failed: ${e.message}")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                response.use {
+                    if (!response.isSuccessful) {
+                        addResponse("Unexpected response code: ${response.code}")
                     } else {
-                        addResponse("Failed to load response due to ${response.body?.string()}")
+                        val responseBody = response.body?.string()
+                        val jsonResponse = JSONObject(responseBody)
+                        val candidatesArray = jsonResponse.optJSONArray("candidates")
+                        val firstCandidate = candidatesArray.getJSONObject(0)
+                        val content = firstCandidate.optJSONObject("content")
+                        val partsArray = content.optJSONArray("parts")
+                        val firstPart = partsArray.getJSONObject(0)
+                        val text = firstPart.optString("text", "No text found")
+                        addResponse(text)
                     }
                 }
-            })
-        }
+            }
+        })
     }
+
+
     private fun addToChat(message: String, sentBy: String) {
         runOnUiThread {
             messages.add(Message(message, sentBy))
