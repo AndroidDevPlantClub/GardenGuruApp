@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Guru"
+        android:icon="@drawable/baseline_home_guru"
+        android:title="Guru"  />
+    <item
+        android:id="@+id/Records"
+        android:icon="@drawable/baseline_collections_bookmark_24"
+        android:title="Records" />
+    <item
+        android:id="@+id/Notifications"
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="Notifications" />
+</menu>
