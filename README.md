@@ -29,15 +29,14 @@ Receiving and following care reminders.
 ### 1. User Features (Required and Optional)
 **Required Features**
 * [x] Users can ask promps to the AI
-* ![ezgif-3-20c6f492e0](https://github.com/user-attachments/assets/dfa0e420-ea33-4229-b1f7-4f589feaffee)
 * [ ] Users can save records for their plant information.
 * [ ] Users can see their records even when app is offline.
-* [ ] Users can click on their records for a detailed view.
 * [ ] Users can make and recieve push notifications. 
 
 
 **Optional Features**
 * [ ] Users can store responses in a digital book.
+* [ ] Users can click on their records for a detailed view.
 * [ ] Users can take pictures of their plant to identify it with the AI.
 * [ ] Users can share their plant information with others via a share button.
 * [ ] Garden Guru has a customized animation for responses
@@ -93,14 +92,20 @@ Flow Navigation (Screen to Screen)
 
 ### Milestone 2 - Build Sprint 1 (Unit 8)
 GitHub Project board
-[Add screenshot of your Project Board with three milestones visible in this section] 
+<img width="1111" alt="image" src="https://github.com/user-attachments/assets/db72cc99-292a-4177-b31b-9fdc9b3a0e63">
 
 Issue cards
+
 [Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] 
-[Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
-Issues worked on this sprint
-List the issues you completed this sprint
-[Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+<img width="1120" alt="image" src="https://github.com/user-attachments/assets/7a92a319-8a50-4852-9ff7-ec85f568a4e3">
+
+[Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.]
+<img width="1117" alt="image" src="https://github.com/user-attachments/assets/9dd27e1d-86b3-4f4d-9134-705fa5a89b34">
+
+Issues worked on this sprint:
+
+- Create UI Chatbot UI Screen
+
 
 Milestone 3 - Build Sprint 2 (Unit 9)
 GitHub Project board
