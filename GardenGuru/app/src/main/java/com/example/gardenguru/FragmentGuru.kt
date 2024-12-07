@@ -144,7 +144,4 @@ class FragmentGuru : Fragment() {
     }
 }
 
-/* This is the code for the .env file uses Dotenv, a tool used
-    for loading environment variables from an .env file.
 
-*/

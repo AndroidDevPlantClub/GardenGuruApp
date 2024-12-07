@@ -33,7 +33,10 @@ class FragmentPlantRecord: Fragment(){
                         entity.id,
                         entity.title,
                         entity.date,
-                        entity.entry
+                        entity.entry,
+                        entity.watering,
+                        entity.sunlight,
+                        entity.soilType
                     )
                 }.also { mappedList ->
                     recordList.clear()

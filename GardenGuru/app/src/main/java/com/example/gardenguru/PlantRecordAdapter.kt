@@ -12,6 +12,9 @@ class PlantRecordAdapter(private val mRecord: List<DisplayPlantRecord>) : Recycl
         val recordTitle: TextView = itemView.findViewById(R.id.RecordTitleText)
         val recordDate: TextView = itemView.findViewById(R.id.RecordDateText)
         val recordEntry: TextView = itemView.findViewById(R.id.RecordText)
+        val wateringText: TextView = itemView.findViewById(R.id.WateringText)
+        val sunlightText: TextView = itemView.findViewById(R.id.SunlightText)
+        val soiltypeText: TextView = itemView.findViewById(R.id.SoiltypeText)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,8 +27,11 @@ class PlantRecordAdapter(private val mRecord: List<DisplayPlantRecord>) : Recycl
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val record = mRecord[position]
         holder.recordDate.text = record.date.toString().substring(0, record.date.toString().indexOf("T"))
-        holder.recordEntry.text = record.entry
+        holder.recordEntry.text = "Species: " + record.entry
         holder.recordTitle.text = record.title.toString()
+        holder.wateringText.text = "Watering: " + record.watering.toString() + " ml"
+        holder.sunlightText.text = "Sunlight: " + record.sunlight.toString() + " hours"
+        holder.soiltypeText.text = "Soil: " + record.soilType.toString()
     }
 
     override fun getItemCount(): Int {

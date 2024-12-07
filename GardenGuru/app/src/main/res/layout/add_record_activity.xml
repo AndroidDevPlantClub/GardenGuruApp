@@ -6,42 +6,167 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".AddPlantRecord">
 
+    <!-- Title -->
+    <TextView
+        android:id="@+id/plantRecordTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#aaba99"
+        android:text=" New Plant Entry"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Plant Title Entry -->
     <EditText
         android:id="@+id/PlantTitleEntry"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
         android:ems="15"
-        android:hint="Plant name"
+        android:hint="What is the plant (i.e Cactus, Rose, etc.)"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:layout_marginTop="5dp"
+        android:textSize="19dp"
+        app:layout_constraintTop_toBottomOf="@id/plantRecordTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Write Record -->
     <EditText
         android:id="@+id/WriteRecord"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
         android:ems="15"
-        android:hint="Write more details about your plant"
+        android:hint="(i.e Monstera Alba)"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
-        android:layout_marginTop="5dp"
+        android:textSize="19dp"
         app:layout_constraintTop_toBottomOf="@id/PlantTitleEntry"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Plant Watering Entry -->
+    <EditText
+        android:id="@+id/PlantWateringEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="15"
+        android:hint="How much water (liters)"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textSize="19dp"
+        app:layout_constraintTop_toBottomOf="@id/WriteRecord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Plant Sunlight Entry -->
+    <EditText
+        android:id="@+id/PlantSunLightEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="15"
+        android:hint="How much sunlight (hours)"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textSize="19dp"
+        app:layout_constraintTop_toBottomOf="@id/PlantWateringEntry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Plant Soil Type Entry -->
+    <EditText
+        android:id="@+id/PlantSoilTypeEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="15"
+        android:hint="(i.e peatmoss, clay soil, etc.)"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textSize="19dp"
+        app:layout_constraintTop_toBottomOf="@id/PlantSunLightEntry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Save Button -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#aaba99"
         android:enabled="false"
         android:text="Add Record"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/PlantSoilTypeEntry"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/PlantTitleEntry" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/PlantTitleEntry"
+        app:layout_constraintTop_toTopOf="@id/PlantTitleEntry"
+        app:layout_constraintBottom_toBottomOf="@id/PlantTitleEntry"
+        app:srcCompat="@drawable/name_icon_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/WriteRecord"
+        app:layout_constraintTop_toTopOf="@id/WriteRecord"
+        app:layout_constraintBottom_toBottomOf="@id/WriteRecord"
+        app:srcCompat="@drawable/plant_name_icon" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/PlantWateringEntry"
+        app:layout_constraintTop_toTopOf="@id/PlantWateringEntry"
+        app:layout_constraintBottom_toBottomOf="@id/PlantWateringEntry"
+        app:srcCompat="@drawable/baseline_water_drop_24" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/PlantSunLightEntry"
+        app:layout_constraintTop_toTopOf="@id/PlantSunLightEntry"
+        app:layout_constraintBottom_toBottomOf="@id/PlantSunLightEntry"
+        app:srcCompat="@drawable/baseline_sunny_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/PlantSoilTypeEntry"
+        app:layout_constraintTop_toTopOf="@id/PlantSoilTypeEntry"
+        app:layout_constraintBottom_toBottomOf="@id/PlantSoilTypeEntry"
+        app:srcCompat="@drawable/soil_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

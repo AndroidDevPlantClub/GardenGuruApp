@@ -33,8 +33,13 @@ class AddPlantRecord : AppCompatActivity() {
 
         var plantTitleEmpty: Boolean
         var plantRecordEmpty: Boolean
+        var plantWateringEmpty: Boolean
+
         val plantTitleEntry: TextView = findViewById(R.id.PlantTitleEntry)
         val plantEntry: TextView = findViewById(R.id.WriteRecord)
+        val plantWateringEntry: TextView = findViewById(R.id.PlantWateringEntry)
+        val plantSunlightEntry: TextView = findViewById(R.id.PlantSunLightEntry)
+        val plantSoilTypeEntry: TextView = findViewById(R.id.PlantSoilTypeEntry)
         val saveButton: Button = findViewById(R.id.saveButton)
 
         class InputTextWatcher: TextWatcher {
@@ -47,6 +52,7 @@ class AddPlantRecord : AppCompatActivity() {
             override fun afterTextChanged(p0: Editable?) {
                 plantTitleEmpty = plantTitleEntry.text.toString().isEmpty()
                 plantRecordEmpty = plantEntry.text.toString().isEmpty()
+
                 saveButton.isEnabled = !plantTitleEmpty && !plantRecordEmpty
             }
 
@@ -61,7 +67,10 @@ class AddPlantRecord : AppCompatActivity() {
                     RecordEntity(
                         plantTitleEntry.text.toString(),
                         Instant.now(),
-                        plantEntry.text.toString()
+                        plantEntry.text.toString(),
+                        plantWateringEntry.text.toString().toInt(),
+                        plantSunlightEntry.text.toString().toInt(),
+                        plantSoilTypeEntry.text.toString()
                     )
                 )
             }
@@ -70,6 +79,9 @@ class AddPlantRecord : AppCompatActivity() {
             Thread.sleep(500)
             plantTitleEntry.text = ""
             plantEntry.text = ""
+            plantWateringEntry.text = ""
+            plantSunlightEntry.text = ""
+            plantSoilTypeEntry.text = ""
             this.finish()
         }
     }

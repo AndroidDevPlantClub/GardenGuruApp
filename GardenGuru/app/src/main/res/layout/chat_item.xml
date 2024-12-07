@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/left_chat_view"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="#1E88E5"
+        android:backgroundTint="#aaba99"
         android:padding="8dp"
         android:layout_marginEnd="80dp">
         <ImageView
@@ -30,7 +30,7 @@
         android:id="@+id/right_chat_view"
         android:layout_alignParentEnd="true"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="#7EB640"
+        android:backgroundTint="#5fb8a9"
         android:padding="8dp"
         android:layout_marginStart="80dp">
         <TextView
