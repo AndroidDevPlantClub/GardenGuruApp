@@ -29,14 +29,14 @@ Receiving and following care reminders.
 ### 1. User Features (Required and Optional)
 **Required Features**
 * [x] Users can ask promps to the AI
-* [ ] Users can save records for their plant information.
-* [ ] Users can see their records even when app is offline.
-* [ ] Users can make and recieve push notifications. 
+* [x] Users can save records for their plant information.
+* [x] Users can see their records even when app is offline.
+* [x] Users can make and recieve push notifications.
+* [ ] Users can click on their records for a detailed view.
 
 
 **Optional Features**
 * [ ] Users can store responses in a digital book.
-* [ ] Users can click on their records for a detailed view.
 * [ ] Users can take pictures of their plant to identify it with the AI.
 * [ ] Users can share their plant information with others via a share button.
 * [ ] Garden Guru has a customized animation for responses
@@ -96,10 +96,10 @@ GitHub Project board
 
 Issue cards
 
-[Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] 
+[Project Board with the issues that you've been working on for this unit's milestone] 
 <img width="1120" alt="image" src="https://github.com/user-attachments/assets/7a92a319-8a50-4852-9ff7-ec85f568a4e3">
 
-[Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.]
+[Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.]
 <img width="1117" alt="image" src="https://github.com/user-attachments/assets/9dd27e1d-86b3-4f4d-9134-705fa5a89b34">
 
 Issues worked on this sprint:
@@ -109,11 +109,27 @@ Issues worked on this sprint:
 
 Milestone 3 - Build Sprint 2 (Unit 9)
 GitHub Project board
-[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] 
+[Project Board with the updated status of issues for Milestone 3]
+![Completed Issues - Milestone 3](https://github.com/user-attachments/assets/60df89e7-efab-4777-8c2f-e389ca258566)
 
-Completed user stories
-List the completed user stories from this unit
+Completed user stories:
+* Users can ask promps to the AI
+* Users can save records for their plant information.
+* Users can see their records even when app is offline.
+* Users can make and recieve push notifications. 
+
 List any pending user stories / any user stories you decided to cut from the original requirements
+* Users can store responses in a digital book.
+* Users can click on their records for a detailed view.
+* Users can take pictures of their plant to identify it with the AI.
+* Users can share their plant information with others via a share button.
+* Garden Guru has a customized animation for responses
+
+Reasoning: 
+
+- Due to a heavy time constraint, the optional extended features for the app were not integrated.
+- The detail view was not integrated in the app for similar reasons. 
+
 [Add video/gif of your current application that shows build progress] 
 
 App Demo Video
