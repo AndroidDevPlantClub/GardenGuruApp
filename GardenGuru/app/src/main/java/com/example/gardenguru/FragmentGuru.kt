@@ -22,16 +22,13 @@ import org.json.JSONObject
 import java.io.IOException
 import io.github.cdimascio.dotenv.Dotenv
 
-//private const val apiKey = "AIzaSyCdVogHSIkIeVTe98lXP9A_lPoRo8MHqbQ"
+//Alternate version of using the apiKey from the .env file located at the bottom of the file
 private val dotenv: Dotenv = Dotenv.configure()
     .directory("GardenGuru/.env")
     .load()
     private val apiKey = dotenv["GEMINI_API_KEY"]
 
 class FragmentGuru : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
     lateinit var recyclerView: RecyclerView
     lateinit var messages: MutableList<Message>
     lateinit var messageAdapter: MessageRecyclerViewAdapter
@@ -146,3 +143,8 @@ class FragmentGuru : Fragment() {
         }
     }
 }
+
+/* This is the code for the .env file uses Dotenv, a tool used
+    for loading environment variables from an .env file.
+
+*/
