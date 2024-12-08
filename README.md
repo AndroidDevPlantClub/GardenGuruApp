@@ -130,7 +130,9 @@ Reasoning:
 - Due to a heavy time constraint, the optional extended features for the app were not integrated.
 - The detail view was not integrated in the app for similar reasons. 
 
-[Add video/gif of your current application that shows build progress] 
+[Add video/gif of your current application that shows build progress]
+
+![gifforguruapp](https://github.com/user-attachments/assets/9ab0606e-e66d-4af5-afa4-85fcdfd8883d)
 
 App Demo Video
 Embed the YouTube/Vimeo link of your Completed Demo Day prep video
