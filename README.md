@@ -134,4 +134,4 @@ Reasoning:
 
 
 App Demo Video
-Embed the YouTube/Vimeo link of your Completed Demo Day prep video
+https://youtu.be/1wECc9lq8LY
