@@ -107,7 +107,7 @@ Issues worked on this sprint:
 - Create UI Chatbot UI Screen
 
 
-Milestone 3 - Build Sprint 2 (Unit 9)
+### Milestone 3 - Build Sprint 2 (Unit 9)
 GitHub Project board
 [Project Board with the updated status of issues for Milestone 3]
 ![Completed Issues - Milestone 3](https://github.com/user-attachments/assets/60df89e7-efab-4777-8c2f-e389ca258566)
