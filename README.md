@@ -1,4 +1,4 @@
-## Milestone 1 - GardenGuruApp (Unit 7)
+## Milestone 1 - GardenGuruApp 
 ## Table of Contents
 - Overview
 - Product Spec
@@ -90,7 +90,7 @@ Flow Navigation (Screen to Screen)
 [BONUS] Digital Wireframes & Mockups
 [BONUS] Interactive Prototype
 
-### Milestone 2 - Build Sprint 1 (Unit 8)
+### Milestone 2 - Build Sprint 1 
 GitHub Project board
 <img width="1111" alt="image" src="https://github.com/user-attachments/assets/db72cc99-292a-4177-b31b-9fdc9b3a0e63">
 
@@ -107,7 +107,7 @@ Issues worked on this sprint:
 - Create UI Chatbot UI Screen
 
 
-### Milestone 3 - Build Sprint 2 (Unit 9)
+### Milestone 3 - Build Sprint 2 
 GitHub Project board
 [Project Board with the updated status of issues for Milestone 3]
 ![Completed Issues - Milestone 3](https://github.com/user-attachments/assets/60df89e7-efab-4777-8c2f-e389ca258566)
