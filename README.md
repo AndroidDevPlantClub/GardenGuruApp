@@ -1,3 +1,5 @@
+<img width="329" height="244" alt="image" src="https://github.com/user-attachments/assets/2058d4d4-6f90-4531-ae03-d1d729baf5f8" />
+
 ## GardenGuru AI Powered Plant Care App 
 
 ## Table of Contents
