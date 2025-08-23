@@ -1,4 +1,5 @@
-## Milestone 1 - GardenGuruApp 
+## GardenGuru AI Powered Plant Care App 
+
 ## Table of Contents
 - Overview
 - Product Spec
